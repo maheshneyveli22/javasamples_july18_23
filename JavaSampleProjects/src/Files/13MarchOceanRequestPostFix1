@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username>TCBKAPP</wsse:Username>
+            <wsse:Password>BADPASSWORD!</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </SOAP-ENV:Header>
+   <SOAP-ENV:Body>
+      <ns4:processItinerary xmlns:ns2="urn:com:expd:service:etms_functions:contract:v2" xmlns:ns3="urn:com:expd:common:etms_functions_shared_service_types:v2" xmlns:ns4="urn:com:expd:service:etms_functions:v2" xmlns:ns5="urn:com:expd:service:etms_functions:dto:v2" xmlns:ns6="urn:com:expd:datatypes" xmlns:ns7="urn:com:expd:common:etms_functions_shared_service_types_generated:v2">
+         <ns4:in>
+            <ns2:etmsBranch>DTW</ns2:etmsBranch>
+            <ns2:function>CREATE</ns2:function>
+            <ns2:requiresLocks>false</ns2:requiresLocks>
+            <ns2:useLastReference>false</ns2:useLastReference>
+            <ns2:appId>TCBKAPP</ns2:appId>
+            <ns2:legacyUserId>TCBKAPP</ns2:legacyUserId>
+            <ns2:itineraryEntries xsi:type="ns2:EiScriptRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <ns2:requiresLocks>false</ns2:requiresLocks>
+               <ns2:useLastReference>false</ns2:useLastReference>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCRIPT</ns2:type>
+                  <ns2:operation>SOURCE</ns2:operation>
+                  <ns2:fieldValue>GSCTRNSCN</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCRIPT</ns2:type>
+                  <ns2:operation>ERROR</ns2:operation>
+                  <ns2:action>CLEAR</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItemSw">
+                  <ns2:type>SWITCH</ns2:type>
+                  <ns2:externalKey>BK97869875</ns2:externalKey>
+                  <ns2:externalKeyType>BKG</ns2:externalKeyType>
+                  <ns2:etmsShipmentType>SOR</ns2:etmsShipmentType>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>RSTRCT-COMM-ITAR-FLAG</ns2:fieldName>
+                  <ns2:fieldValue>N</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>RSTRCT-COMM-CODE</ns2:fieldName>
+                  <ns2:fieldValue>UNKN</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>RSTRCT-COMM-RQST-TYPE</ns2:fieldName>
+                  <ns2:fieldValue>U</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>VIA-EIO-SW</ns2:fieldName>
+                  <ns2:fieldValue>Y</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>MOVE-TYPE</ns2:fieldName>
+                  <ns2:fieldValue>CFS/CY</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>SHIPPER-NAME</ns2:fieldName>
+                  <ns2:fieldValue>gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>CONSIGN-NAME</ns2:fieldName>
+                  <ns2:fieldValue>gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>PU-DELIVER-FLAG</ns2:fieldName>
+                  <ns2:fieldValue>Y</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>BOOKING-DATE</ns2:fieldName>
+                  <ns2:fieldValue>x</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>UOM-WGT</ns2:fieldName>
+                  <ns2:fieldValue>K</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>UOM-VOL</ns2:fieldName>
+                  <ns2:fieldValue>M3</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>PCS-BK</ns2:fieldName>
+                  <ns2:fieldValue>222</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>PCKG-BK</ns2:fieldName>
+                  <ns2:fieldValue>PCS</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>WGT-BK</ns2:fieldName>
+                  <ns2:fieldValue>222</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>VOL-BK</ns2:fieldName>
+                  <ns2:fieldValue>222</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:fieldName>DATE-XPCTD-RECV</ns2:fieldName>
+                  <ns2:fieldValue>20230323</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:action>RETURNVAL</ns2:action>
+                  <ns2:fieldName>SHIPORD-REF</ns2:fieldName>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>BLSORD</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>SHIPPER-NAME</ns2:fieldName>
+                  <ns2:fieldValue>gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>CONSIGN-NAME</ns2:fieldName>
+                  <ns2:fieldValue>gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>PORT-LOADING</ns2:fieldName>
+                  <ns2:fieldValue>BND</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>SHIPMENT-TYPE-DISP</ns2:fieldName>
+                  <ns2:fieldValue>OHO</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>WG-DELIVERY</ns2:fieldName>
+                  <ns2:fieldValue>N</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>PU-DELIVER-FLAG</ns2:fieldName>
+                  <ns2:fieldValue>Y</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>WG-PICKUP</ns2:fieldName>
+                  <ns2:fieldValue>N</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:fieldName>NOTE-FLAG</ns2:fieldName>
+                  <ns2:fieldValue>Y</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>LOG</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>DIMS</ns2:operation>
+                  <ns2:fieldName>@CLEARDATA</ns2:fieldName>
+                  <ns2:fieldValue/>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>DIMS</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>DIMS</ns2:operation>
+                  <ns2:fieldName>RSTRCT-COMM-ITAR-FLAG</ns2:fieldName>
+                  <ns2:fieldValue>N</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>DIMS</ns2:operation>
+                  <ns2:fieldName>RSTRCT-COMM-CODE</ns2:fieldName>
+                  <ns2:fieldValue>UNKN</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>DIMS</ns2:operation>
+                  <ns2:fieldName>RSTRCT-COMM-RQST-TYPE</ns2:fieldName>
+                  <ns2:fieldValue>U</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>DIMS</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:fieldName>STAT-CODE</ns2:fieldName>
+                  <ns2:fieldValue>LKO</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:fieldName>FLIGHT-FM-STAT</ns2:fieldName>
+                  <ns2:fieldValue>BND</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:fieldName>FLIGHT-TO-STAT</ns2:fieldName>
+                  <ns2:fieldValue>DTW</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:fieldName>REMARKS-STAT</ns2:fieldName>
+                  <ns2:fieldValue>BK97869875</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:fieldName>STAT-CODE</ns2:fieldName>
+                  <ns2:fieldValue>NTO</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:fieldName>FLIGHT-FM-STAT</ns2:fieldName>
+                  <ns2:fieldValue>BND</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:fieldName>FLIGHT-TO-STAT</ns2:fieldName>
+                  <ns2:fieldValue>DTW</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:fieldName>REMARKS-STAT</ns2:fieldName>
+                  <ns2:fieldValue>BK97869875</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>HIST</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>@CLEARDATA</ns2:fieldName>
+                  <ns2:fieldValue/>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>ORIGIN PAYMENT TERMS        : P</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>FREIGHT PAYMENT TERMS       : P</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>GENERAL DESCRIPTION OF GOODS: Apples</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>DANGEROUS GOODS             : No</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>DECLARED VALUE FOR CUSTOMS  : 2222 USD</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>IS FREIGHT OVER SIZED       : No</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>WOOD PACKING MATERIAL       : false</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>MATERIAL TREATED ISPM16     : false</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>PICKUP - COMPANY NAME       : gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>PICKUP - COUNTRY CODE       : FR</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>PICKUP - ADDRESS LINE 1     : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>PICKUP - ADDRESS LINE 3     : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>PICKUP - CITY NAME          : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>PICKUP - POSTAL CODE        : 77375</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>PICKUP - TELEPHONE NUMBER   : 000000000</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>PICKUP - CONTACT NAME       : Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>PICKUP - CONTACT TELEPHONE NUMBER: 000000000</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>BLDMRK EXPRESS-RELEASE      : N</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>EXPRESS/SEA WAYBILL         : Original</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>--- Freight Total count---</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>Total Pieces                : 222</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>Total Weight                : 222 K</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>Total Volume                : 222 M3</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>MOVE TYPE                   : CFS/CY</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>SHIPPER'S LETTER OF INSTRUCTION (OCEAN): Attached</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>LETTER OF CREDIT REQUIRED   : No</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>EXPEDITORS QUOTE NUMBER     : 222</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>***** BOOKING DETAILS BEGIN HERE *****</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>-- CONTACT INFORMATION --</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CUSTOMER</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>COMPANY NAME                : gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CUSTOMER GCI                : G2890701</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>COUNTRY CODE                : FR</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>ADDRESS LINE 1              : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>ADDRESS LINE 3              : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CITY NAME                   : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>POSTAL CODE                 : 77375</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>TELEPHONE NUMBER            : 000000000</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CONTACT NAME                : Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CONTACT TELEPHONE NUMBER    : 000000000</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>------------------------</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>SHIPPER</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>COMPANY NAME                : gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>COUNTRY CODE                : FR</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>ADDRESS LINE 1              : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>ADDRESS LINE 3              : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CITY NAME                   : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>POSTAL CODE                 : 77375</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>TELEPHONE NUMBER            : 000000000</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CONTACT NAME                : Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CONTACT TELEPHONE NUMBER    : 000000000</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>------------------------</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CONSIGNEE</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>COMPANY NAME                : gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>COUNTRY CODE                : FR</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>ADDRESS LINE 1              : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>ADDRESS LINE 3              : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CITY NAME                   : Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>POSTAL CODE                 : 77375</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>TELEPHONE NUMBER            : 000000000</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CONTACT NAME                : Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>CONTACT TELEPHONE NUMBER    : 000000000</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>------------------------</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:fieldName>NOTE-LINE</ns2:fieldName>
+                  <ns2:fieldValue>***** BOOKING DETAILS END HERE *****</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>NOTES</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>CUR-STATUS-DESC</ns2:fieldName>
+                  <ns2:fieldValue>BOOKED</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>DATE-CREATE</ns2:fieldName>
+                  <ns2:fieldValue>2023-03-13T15:05:42.219+05:30</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>TIME-CREATE</ns2:fieldName>
+                  <ns2:fieldValue>2023-03-13T15:05:42.219+05:30</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>SHIPPER-NAME</ns2:fieldName>
+                  <ns2:fieldValue>gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>REVENUE-NAME</ns2:fieldName>
+                  <ns2:fieldValue>gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>CONSIGN-NAME</ns2:fieldName>
+                  <ns2:fieldValue>gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>CONSIGN-ADDRESS-1</ns2:fieldName>
+                  <ns2:fieldValue>Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>CONSIGN-CITY</ns2:fieldName>
+                  <ns2:fieldValue>Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>PRINT-FLAG</ns2:fieldName>
+                  <ns2:fieldValue>N</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>PORT-ORIGIN</ns2:fieldName>
+                  <ns2:fieldValue>BND</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>PORT-DESTIN</ns2:fieldName>
+                  <ns2:fieldValue>DTW</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>SERVICE-TYPE</ns2:fieldName>
+                  <ns2:fieldValue>/D</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>CHRG-CODE-FRGHT</ns2:fieldName>
+                  <ns2:fieldValue>P</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>GOODS-DESC</ns2:fieldName>
+                  <ns2:fieldValue>Apples</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>PICKUP-DELIVER-FLAG</ns2:fieldName>
+                  <ns2:fieldValue>Y</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>DATE-READY</ns2:fieldName>
+                  <ns2:fieldValue>20230323</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>TIME-READY</ns2:fieldName>
+                  <ns2:fieldValue>00:00</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>DATE-CLOSE</ns2:fieldName>
+                  <ns2:fieldValue>20230403</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>TIME-CLOSE</ns2:fieldName>
+                  <ns2:fieldValue>00:00</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>PICKUP-NAME</ns2:fieldName>
+                  <ns2:fieldValue>gs1-maheswarane_Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>ADDRESS-1</ns2:fieldName>
+                  <ns2:fieldValue>Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>CITY</ns2:fieldName>
+                  <ns2:fieldValue>Test</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>PICKUP-CONTACT</ns2:fieldName>
+                  <ns2:fieldValue>Test Company</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>PHONE</ns2:fieldName>
+                  <ns2:fieldValue>000000000</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>TYPE-OF-GOODS</ns2:fieldName>
+                  <ns2:fieldValue>LCL</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>UOM-VOL</ns2:fieldName>
+                  <ns2:fieldValue>M3</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>UOM-WGT</ns2:fieldName>
+                  <ns2:fieldValue>K</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>PCS-BK</ns2:fieldName>
+                  <ns2:fieldValue>222</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>WGT-BK</ns2:fieldName>
+                  <ns2:fieldValue>222</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:fieldName>VOL-BK</ns2:fieldName>
+                  <ns2:fieldValue>222</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>PICKUP</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:fieldName>@CLEARDATA</ns2:fieldName>
+                  <ns2:fieldValue/>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:fieldName>CLIENT-REF</ns2:fieldName>
+                  <ns2:fieldValue>BK97869875</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:fieldName>CLIENT-REF-TYPE</ns2:fieldName>
+                  <ns2:fieldValue>BKG</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:fieldName>CLIENT-TYPE</ns2:fieldName>
+                  <ns2:fieldValue>E</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:fieldName>CLIENT-TYPE</ns2:fieldName>
+                  <ns2:fieldValue>C</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:fieldName>CLIENT-REF-TYPE</ns2:fieldName>
+                  <ns2:fieldValue>CTID</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:fieldName>CLIENT-REF</ns2:fieldName>
+                  <ns2:fieldValue>3322333</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:action>ADDINDEX</ns2:action>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:fieldName>CLIENT-TYPE</ns2:fieldName>
+                  <ns2:fieldValue>E</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:fieldName>CLIENT-REF-TYPE</ns2:fieldName>
+                  <ns2:fieldValue>Q#</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:fieldName>CLIENT-REF</ns2:fieldName>
+                  <ns2:fieldValue>222</ns2:fieldValue>
+               </ns2:eiScriptItineraryItems>
+               <ns2:eiScriptItineraryItems xsi:type="ns2:EiScriptItem">
+                  <ns2:type>SCREEN</ns2:type>
+                  <ns2:operation>REFS</ns2:operation>
+                  <ns2:function>ADDvMODIFY</ns2:function>
+               </ns2:eiScriptItineraryItems>
+            </ns2:itineraryEntries>
+         </ns4:in>
+      </ns4:processItinerary>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
